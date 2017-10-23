@@ -10,6 +10,16 @@ $( document ).ready(function() {
             format: "json"
           })
             .done((data) => {
+            let {temp, pressure, humidity, temp_min, temp_max} = data.main;
+
+            $("#location").html(`${data.name}, ${data.sys['country']}`);
+            $("#conditions").html(data.weather[0].description);
+            $("#temp").html(temp);
+            $("#px").html(pressure);
+            $("#humidity").html(humidity);
+            $("#temp_min").html(temp_min);
+            $("#temp_max").html(temp_max);
+
             $("#results").html(JSON.stringify(data));
           });
       });
