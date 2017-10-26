@@ -3,9 +3,10 @@ $(document).ready(() => {
       navigator.geolocation.getCurrentPosition((position) => {
         let lat = position.coords.latitude;
         let long = position.coords.longitude;
-        let fccWxApi = `https://fcc-weather-api.glitch.me/api/current?lat=${lat}&lon=${long}`;
+        let APIKEY = 'c7b5c30d16ccee93fb9c68b762824218';
+        let weatherApi = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=metric&APPID=${APIKEY}`;
 
-        $.getJSON(fccWxApi, {
+        $.getJSON(weatherApi, {
             format: "json"
           })
             .done((data) => {
