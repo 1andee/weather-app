@@ -1,0 +1,28 @@
+h1 {
+  color: orange;
+}
+
+.button {
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 8px;
+  height: 25px;
+  cursor: pointer;
+}
+
+#toggleContainer {
+  visibility: hidden;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.show {
+  visibility: visible!important;
+}

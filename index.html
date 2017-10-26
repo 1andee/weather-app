@@ -3,16 +3,22 @@
     <title>Weather App</title>
     <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
     <script src="./assets/main.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./assets/style.css" rel="stylesheet">
   </head>
 
   <body>
     <h1>FCC Weather App</h1>
 
-    <h3>Location</h3>
+    <h3 id="currentHeader"></h3>
+
+    <div id="spinner">
+      <i class="fa fa-cog fa-spin fa-3x fa-fw"></i>
+    </div>
+
     <div id="location">
     </div>
 
-    <h3>Current Conditions</h3>
     <div id="conditions">
     </div>
 
@@ -22,8 +28,10 @@
     <div id="temp_min"></div>
     <div id="temp_max"></div>
 
-    <div id="convertF" class="button">Fahrenheit</div>
-    <div id="convertC" class="button">Celsius</div>
+    <div id="toggleContainer">
+      <div id="convertF" class="button">Fahrenheit</div>
+      <div id="convertC" class="button">Celsius</div>
+    </div>
 
   </body>
 
