@@ -3,7 +3,7 @@ $(document).ready(() => {
       navigator.geolocation.getCurrentPosition((position) => {
         let lat = position.coords.latitude;
         let long = position.coords.longitude;
-        let APIKEY = 'c7b5c30d16ccee93fb9c68b762824218';
+        let APIKEY = 'c7b5c30d16ccee93fb9c68b762824218'; // never do this
         let weatherApi = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=metric&APPID=${APIKEY}`;
 
         $.getJSON(weatherApi, {
